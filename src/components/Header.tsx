@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -36,30 +35,46 @@ export const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+          <div className="md:hidden relative">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200 text-white border border-white/30 bg-white/10"
+            >
+              {isMenuOpen ? (
+                <X size={24} color="white" />
+              ) : (
+                <Menu size={24} color="white" />
+              )}
+            </button>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block py-2 text-white/80 hover:text-white transition-colors duration-300 text-sm tracking-wide"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
-        )}
+            {/* Mobile Dropdown Menu */}
+            {isMenuOpen && (
+              <div className="absolute top-full right-0 mt-2 w-48 bg-black/90 backdrop-blur-md border border-white/20 rounded-lg shadow-xl overflow-hidden">
+                <nav className="py-2">
+                  {navItems.map((item, index) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm tracking-wide capitalize"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
+
+      {/* Mobile Backdrop */}
+      {isMenuOpen && (
+        <div
+          className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
     </header>
   );
 };
