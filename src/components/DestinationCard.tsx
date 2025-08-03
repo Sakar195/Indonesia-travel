@@ -11,7 +11,7 @@ interface DestinationCardProps {
 export const DestinationCard = ({ destination }: DestinationCardProps) => {
   return (
     <div className="group cursor-pointer w-full">
-      <div className="relative h-64 md:h-80 lg:h-96 mb-4 overflow-hidden rounded-lg w-full">
+      <div className="relative h-64 md:h-80 lg:h-96 mb-4 overflow-hidden rounded-xl w-full">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform group-hover:scale-110 transition-transform duration-700"
           style={{

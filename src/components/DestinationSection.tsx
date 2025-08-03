@@ -53,11 +53,11 @@ export const DestinationSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-16">
           {destinations.map((destination, index) => (
             <div
               key={destination.id}
-              className="transform hover:-translate-y-2 transition-transform duration-300 ease-out"
+              className="transform hover:-translate-y-2 transition-transform duration-300 ease-out w-full"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <DestinationCard destination={destination} />
