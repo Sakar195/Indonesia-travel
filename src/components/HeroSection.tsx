@@ -85,7 +85,7 @@ export const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 sm:mb-8 leading-tight transition-all duration-500 ease-in-out">
+          <h1 className="text-3xl sm:text-6xl md:text-8xl font-bold mb-6 sm:mb-8 leading-tight transition-all duration-500 ease-in-out">
             {currentImage.title.split("\n").map((line, index) => (
               <span key={index}>
                 {line}

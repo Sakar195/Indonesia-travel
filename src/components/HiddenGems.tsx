@@ -57,7 +57,7 @@ const HiddenGems = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl">
             Hidden Gems of Indonesia
           </h2>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto backdrop-blur-sm bg-black/20 p-4 rounded-lg inline-block">
+          <p className="text-white/90 text-lg max-w-2xl mx-auto">
             Discover lesser-known destinations that showcase the untouched
             beauty and charm of Indonesia.
           </p>

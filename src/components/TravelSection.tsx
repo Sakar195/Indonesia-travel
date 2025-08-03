@@ -2,7 +2,7 @@ export const TravelSection = () => {
   return (
     <section
       id="travel-section"
-      className="relative py-20 bg-black overflow-hidden"
+      className="relative pt-0 pb-20 bg-gradient-to-b from-black via-transparent to-transparent overflow-hidden"
     >
       {/* Full Screen Video Background */}
       <div className="absolute inset-0 w-full h-full">
@@ -15,7 +15,7 @@ export const TravelSection = () => {
           title="Background video"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/20"></div>
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center">
