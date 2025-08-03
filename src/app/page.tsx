@@ -2,6 +2,7 @@ import { DestinationSection } from "@/components/DestinationSection";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import HiddenGems from "@/components/HiddenGems";
+import { HighlightsSection } from "@/components/HighlightsSection";
 import { TravelSection } from "@/components/TravelSection";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <DestinationSection />
+      <HighlightsSection />
       <HiddenGems />
       <TravelSection />
     </main>

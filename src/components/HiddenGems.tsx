@@ -10,9 +10,9 @@ const HiddenGems = () => {
   const gems = [
     {
       id: 1,
-      name: "Labuan Bajo Beach",
+      name: "Kampung Naga",
       image: "/images/kampung-naga-hg.jpg",
-      description: "Gateway to Komodo National Park",
+      description: "Sundanese village preserving traditional lifestyle",
     },
     {
       id: 2,
@@ -22,9 +22,9 @@ const HiddenGems = () => {
     },
     {
       id: 3,
-      name: "Papuma Beach",
+      name: "Ora Beach",
       image: "/images/ora-beach-hg.jpg",
-      description: "Hidden coastal paradise with unique rock formations",
+      description: "Hidden coastal paradise with overwater bungalows",
     },
   ];
 
@@ -142,20 +142,6 @@ const HiddenGems = () => {
               </div>
             );
           })}
-        </div>
-
-        <div className="flex justify-center mt-8 space-x-3">
-          {gems.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-white scale-125"
-                  : "bg-white/40 hover:bg-white/60"
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>

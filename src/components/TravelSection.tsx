@@ -1,7 +1,3 @@
-"use client";
-
-import { Play } from "lucide-react";
-
 export const TravelSection = () => {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
@@ -14,11 +10,10 @@ export const TravelSection = () => {
           frameBorder="0"
           title="Background video"
         />
-        {/* Dark overlay for better text readability */}
+
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      {/* Content Container */}
       <div className="relative z-10 min-h-screen flex items-center">
         <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -50,7 +45,6 @@ export const TravelSection = () => {
               </p>
             </div>
 
-            {/* Right Content - Empty for video focus */}
             <div className="relative hidden lg:block"></div>
           </div>
         </div>
