@@ -71,9 +71,9 @@ export const HeroSection = () => {
   const currentImage = heroImages[currentImageIndex];
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-screen flex items-center justify-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out overflow-hidden"
         style={{
           backgroundImage: `url('${currentImage.image}')`,
         }}

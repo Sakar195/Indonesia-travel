@@ -51,9 +51,9 @@ export const Header: React.FC = () => {
   );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10 overflow-x-hidden">
+      <div className="container mx-auto px-4 py-4 overflow-x-hidden">
+        <div className="flex items-center justify-between w-full">
           {/* Left section */}
           <div className="pl-8 sm:pl-12 flex items-center w-40">
             <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
