@@ -63,7 +63,7 @@ export const HighlightsSection = () => {
                 className="group cursor-pointer transform hover:scale-105 transition-all duration-500"
               >
                 {/* Card */}
-                <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative h-96 md:h-[28rem] lg:h-[32rem] rounded-2xl overflow-hidden shadow-xl">
                   {/* Background Image */}
                   <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat transform group-hover:scale-110 transition-transform duration-700"
@@ -80,7 +80,7 @@ export const HighlightsSection = () => {
                     <h3 className="text-2xl md:text-3xl font-bold mb-3 leading-tight drop-shadow-lg">
                       {destination.name}
                     </h3>
-                    <p className="text-white/90 text-sm leading-relaxed backdrop-blur-sm bg-black/20 p-2 rounded-lg">
+                    <p className="text-white/90 text-sm leading-relaxed">
                       {destination.description}
                     </p>
                   </div>
@@ -91,7 +91,7 @@ export const HighlightsSection = () => {
                       <h4 className="text-xl font-semibold mb-2">
                         Explore {destination.name}
                       </h4>
-                      <p className="text-sm text-white/90 bg-black/20 p-3 rounded-lg">
+                      <p className="text-sm text-white/90">
                         {destination.longDescription}
                       </p>
                     </div>

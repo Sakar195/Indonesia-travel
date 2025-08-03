@@ -10,8 +10,8 @@ interface DestinationCardProps {
 
 export const DestinationCard = ({ destination }: DestinationCardProps) => {
   return (
-    <div className="group cursor-pointer">
-      <div className="relative h-64 mb-4 overflow-hidden rounded-lg">
+    <div className="group cursor-pointer w-full">
+      <div className="relative h-64 md:h-80 lg:h-96 mb-4 overflow-hidden rounded-lg w-full">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform group-hover:scale-110 transition-transform duration-700"
           style={{
@@ -31,7 +31,7 @@ export const DestinationCard = ({ destination }: DestinationCardProps) => {
       </div>
 
       {/* Description */}
-      <p className="text-white/70 text-sm group-hover:text-white/90 transition-colors duration-300">
+      <p className="text-white/80 text-sm group-hover:text-white transition-colors duration-300">
         {destination.description}
       </p>
     </div>
