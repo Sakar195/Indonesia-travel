@@ -54,12 +54,17 @@ export const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          {/* Left section */}
+          <div className="pl-4 flex items-center w-32">
             <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
             <h1 className="text-xl font-bold tracking-wider">TRAVEL</h1>
           </div>
 
-          <nav role="navigation" className="hidden md:flex space-x-8">
+          {/* Center navigation */}
+          <nav
+            role="navigation"
+            className="hidden md:flex justify-center space-x-12 absolute left-1/2 -translate-x-1/2"
+          >
             {navItems.map((item, index) => (
               <NavItem
                 key={`${item.name}-${index}`}
@@ -70,41 +75,44 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          <div className="md:hidden relative">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-menu"
-              type="button"
-              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200 text-white border border-white/30 bg-white/10"
-            >
-              {isMenuOpen ? (
-                <X size={24} color="white" />
-              ) : (
-                <Menu size={24} color="white" />
-              )}
-            </button>
-
-            {isMenuOpen && (
-              <div
-                id="mobile-menu"
-                className="absolute top-full right-0 mt-2 w-48 bg-black/90 backdrop-blur-md border border-white/20 rounded-lg shadow-xl overflow-hidden"
+          {/* Right section */}
+          <div className="w-32 flex justify-end">
+            <div className="md:hidden relative">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+                type="button"
+                className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200 text-white border border-white/30 bg-white/10"
               >
-                <nav role="navigation" className="py-2">
-                  {navItems.map((item, index) => (
-                    <a
-                      key={`${item.name}-${index}`}
-                      href={item.href}
-                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm tracking-wide capitalize"
-                      onClick={handleMobileNavClick(item.href)}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            )}
+                {isMenuOpen ? (
+                  <X size={24} color="white" />
+                ) : (
+                  <Menu size={24} color="white" />
+                )}
+              </button>
+
+              {isMenuOpen && (
+                <div
+                  id="mobile-menu"
+                  className="absolute top-full right-0 mt-2 w-48 bg-black/90 backdrop-blur-md border border-white/20 rounded-lg shadow-xl overflow-hidden"
+                >
+                  <nav role="navigation" className="py-2">
+                    {navItems.map((item, index) => (
+                      <a
+                        key={`${item.name}-${index}`}
+                        href={item.href}
+                        className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm tracking-wide capitalize"
+                        onClick={handleMobileNavClick(item.href)}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
