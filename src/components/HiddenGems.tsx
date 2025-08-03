@@ -50,14 +50,14 @@ const HiddenGems = () => {
   return (
     <section
       id="hidden-gems"
-      className="py-20 bg-gradient-to-b from-black via-black/95 to-black text-white"
+      className="py-20 bg-gradient-to-b from-gray-900/90 via-black/80 to-black/70 text-white backdrop-blur-md"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl">
             Hidden Gems of Indonesia
           </h2>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+          <p className="text-white/80 text-lg max-w-2xl mx-auto backdrop-blur-sm bg-black/20 p-4 rounded-lg inline-block">
             Discover lesser-known destinations that showcase the untouched
             beauty and charm of Indonesia.
           </p>

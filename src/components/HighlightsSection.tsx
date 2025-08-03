@@ -41,15 +41,15 @@ export const HighlightsSection = () => {
   return (
     <section
       id="highlights-section"
-      className="py-20 bg-gradient-to-b from-black via-black/95 to-black"
+      className="py-20 bg-gradient-to-b from-amber-50/80 via-amber-50/70 to-orange-50/60"
     >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 bg-white/5 px-6 py-2 rounded-full backdrop-blur-sm inline-block">
+          <p className="text-gray-900 text-sm uppercase tracking-[0.2em] mb-2 bg-black/5 px-6 py-2 rounded-full backdrop-blur-sm inline-block border border-black/10">
             Highlights
           </p>
-          <h2 className="text-4xl md:text-5xl text-white mb-8">
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-8">
             Must-Visit Places
           </h2>
         </div>
@@ -77,21 +77,21 @@ export const HighlightsSection = () => {
 
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-3 leading-tight drop-shadow-lg">
                       {destination.name}
                     </h3>
-                    <p className="text-white/90 text-sm leading-relaxed">
+                    <p className="text-white/90 text-sm leading-relaxed backdrop-blur-sm bg-black/20 p-2 rounded-lg">
                       {destination.description}
                     </p>
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                     <div className="text-center text-white p-6">
                       <h4 className="text-xl font-semibold mb-2">
                         Explore {destination.name}
                       </h4>
-                      <p className="text-sm text-white/80">
+                      <p className="text-sm text-white/90 bg-black/20 p-3 rounded-lg">
                         {destination.longDescription}
                       </p>
                     </div>
@@ -100,13 +100,6 @@ export const HighlightsSection = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-white/20">
-            Discover All Destinations
-          </button>
         </div>
       </div>
     </section>
