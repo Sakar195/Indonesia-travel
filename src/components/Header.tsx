@@ -55,7 +55,7 @@ export const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Left section */}
-          <div className="pl-4 flex items-center w-32">
+          <div className="pl-8 sm:pl-12 flex items-center w-40">
             <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
             <h1 className="text-xl font-bold tracking-wider">TRAVEL</h1>
           </div>
