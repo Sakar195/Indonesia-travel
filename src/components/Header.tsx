@@ -28,9 +28,9 @@ export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const navItems: NavigationItem[] = [
-    { name: "Places to go", href: "#places" },
-    { name: "Things to do", href: "#things" },
-    { name: "island", href: "#island" },
+    { name: "Places to go", href: "#highlights-section" },
+    { name: "Hidden Gems", href: "#hidden-gems" },
+    { name: "Travel", href: "#travel-section" },
   ];
 
   const handleSmoothScroll = useCallback(

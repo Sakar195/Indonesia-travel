@@ -1,6 +1,9 @@
 export const TravelSection = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section
+      id="travel-section"
+      className="relative py-20 bg-black overflow-hidden"
+    >
       {/* Full Screen Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <iframe
@@ -11,7 +14,7 @@ export const TravelSection = () => {
           title="Background video"
         />
 
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center">

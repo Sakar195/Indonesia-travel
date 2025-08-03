@@ -39,14 +39,17 @@ export const HighlightsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section
+      id="highlights-section"
+      className="py-20 bg-gradient-to-b from-black via-black/95 to-black"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-gray-600 text-sm uppercase tracking-wider mb-2">
+          <p className="text-white/70 text-sm uppercase tracking-[0.2em] mb-2 bg-white/5 px-6 py-2 rounded-full backdrop-blur-sm inline-block">
             Highlights
           </p>
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-5xl text-white mb-8">
             Must-Visit Places
           </h2>
         </div>
@@ -101,7 +104,7 @@ export const HighlightsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <button className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300 font-medium">
+          <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/10 hover:border-white/20">
             Discover All Destinations
           </button>
         </div>
